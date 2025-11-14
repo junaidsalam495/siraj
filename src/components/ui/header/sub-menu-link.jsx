@@ -1,5 +1,8 @@
+import { iconMap } from "@/mock/navigation-config";
+
 const SubMenuLink = ({ item, pathname }) => {
   const isActive = pathname === item.url;
+  const Icon = iconMap[item.icon];
 
   return (
     <a
@@ -10,7 +13,11 @@ const SubMenuLink = ({ item, pathname }) => {
       }`}
       href={item.url}
     >
-      <div className="text-foreground">{item.icon}</div>
+      <Icon
+        className={`size-6 ${
+          isActive ? "text-black" : "text-white group-hover:text-black"
+        }`}
+      />
       <div>
         <div className="text-sm font-semibold">{item.title}</div>
         {item.description && (

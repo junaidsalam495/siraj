@@ -14,7 +14,14 @@ import HeroSection from "@/components/ui/hero-section";
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      <HeroSection
+        tagText="BEST IT SOLUTION SERVICE"
+        whiteText="Modern Your Business with"
+        highlightText="IT Service."
+        description="IT solutions refer to a broad range of services and technologies designed to address specific business needs, streamline operations, and drive growth."
+        backgroundImage="/images/home/bg-hero.png"
+        isBtn={true}
+      />
       <AboutUs />
       <ServiceUs />
       <ChooseUs />

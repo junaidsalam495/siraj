@@ -18,7 +18,7 @@ export const SectionHeading = ({
 }) => {
   return (
     <h2
-      className={`font-extrabold relative z-10 text-3xl md:text-5xl leading-snug text-${align} ${className}`}
+      className={`font-extrabold relative capitalize z-10 text-3xl md:text-5xl leading-snug text-${align} ${className}`}
     >
       <span className="text-white">{whiteText} </span>
       <span className="text-primary">{highlightText}</span>
@@ -29,7 +29,7 @@ export const SectionHeading = ({
 export const SubHeading = ({ text, className = "" }) => {
   return (
     <>
-      <h3 className={`font-bold text-white text-xl md:text-2xl ${className}`}>{text}</h3>
+      <h3 className={`font-bold text-white capitalize text-xl md:text-2xl ${className}`}>{text}</h3>
     </>
   );
 };

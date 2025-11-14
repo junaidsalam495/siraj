@@ -100,7 +100,7 @@ const Header = () => {
                     </a>
                   </SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col gap-6 p-4">
+                <div className="flex flex-col gap-6">
                   <Accordion
                     type="single"
                     collapsible
@@ -112,11 +112,6 @@ const Header = () => {
                   </Accordion>
 
                   <div className="flex flex-col gap-3">
-                    <Button asChild variant="outline">
-                      <a href={navigationConfig?.contact?.url}>
-                        {navigationConfig?.contact?.title}
-                      </a>
-                    </Button>
                     <Button asChild>
                       <a href={navigationConfig?.contact?.url}>
                         {navigationConfig?.contact?.title}

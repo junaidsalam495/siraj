@@ -8,18 +8,13 @@ import MegaMenu from "./mega-menu";
 
 const renderMenuItem = (item, pathname) => {
   const isActive = pathname === item.url;
-  const hasActiveSubItem = item.items?.some(
-    (subItem) => pathname === subItem.url
-  );
-
   if (item.items) {
     return (
       <NavigationMenuItem key={item.title}>
         <NavigationMenuTrigger
           className={
-            isActive ||
-            (hasActiveSubItem &&
-              "text-primary underline decoration-primary decoration-2 underline-offset-4")
+            isActive &&
+            "text-primary underline decoration-primary decoration-2 underline-offset-4"
           }
         >
           {item.title}

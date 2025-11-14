@@ -18,7 +18,7 @@ export const BlogCardLarge = ({
   return (
     <>
       <Card className="bg-black rounded-md shadow-[-10px_0px_60px_#00000017] border-0 row-span-2">
-        <CardContent className="p-6 space-y-4">
+        <CardContent className="p-4 md:p-6 space-y-4">
           <div className="relative">
             <Image
               src="/images/blog/blog1.jpg"
@@ -151,5 +151,45 @@ export const BlogCardSmall = ({
         </CardContent>
       </Card>
     </>
+  );
+};
+
+export const BlogCardSimple = ({
+  image,
+  date,
+  comments,
+  title,
+  description,
+}) => {
+  return (
+    <Card className="service-card rounded-xl shadow-[-10px_0px_60px_#00000017] border-0 h-full">
+      <CardContent className="p-0 flex flex-col justify-between h-full">
+        <div className="p-4 md:p-6 space-y-3">
+          <SubHeading text={title} />
+          <ParagraphText
+            text={description}
+            className="text-white line-clamp-3"
+          />
+        </div>
+        <Image
+          src={image}
+          alt="Blog post"
+          className="w-full h-48 object-cover"
+          width={200}
+          height={200}
+          loading="lazy"
+        />
+        <div className="flex justify-between items-center gap-4 p-6">
+          <div className="flex items-center">
+            <CalendarIcon className="mr-2" size={20} />
+            <ParagraphText text={date} className="text-white" />
+          </div>
+          <div className="flex items-center">
+            <MessageSquareIcon className="mr-2" size={20} />
+            <ParagraphText text={comments} className="text-white" />
+          </div>
+        </div>
+      </CardContent>
+    </Card>
   );
 };

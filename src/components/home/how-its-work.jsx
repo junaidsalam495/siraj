@@ -3,6 +3,7 @@ import UnderlineTitle from "../ui/text/underline-title";
 import { howItsWorkSteps } from "@/mock/how-its-work";
 import InfoCard from "../ui/card/info-card";
 import { SectionHeading } from "../ui/text/heading-text";
+import Image from "next/image";
 
 const HowItsWork = () => {
   return (
@@ -23,6 +24,13 @@ const HowItsWork = () => {
             />
           ))}
         </div>
+        <Image
+          src="/images/gradient-circle.png"
+          width={600}
+          height={600}
+          alt="Gradient"
+          className="absolute right-0 top-0"
+        />
       </section>
     </>
   );

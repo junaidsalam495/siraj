@@ -9,7 +9,7 @@ import { Textarea } from "../textarea";
 const ContactForm = () => {
   return (
     <>
-      <form className="space-y-6 contact-form md:p-8 p-4 rounded-xl">
+      <form className="space-y-6 contact-form md:p-8 p-4 rounded-xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {formFields?.map((field) => (
             <div key={field.id} className={field.gridColumn}>

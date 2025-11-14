@@ -92,7 +92,6 @@
       #ffffff 0%,
       rgba(255, 255, 255, 0) 100%
     );
-  backdrop-filter: blur(12.156224250793457px);
 }
 .contact-form {
   background: radial-gradient(
@@ -113,5 +112,4 @@
       #ffffff 0%,
       rgba(255, 255, 255, 0) 100%
     );
-  backdrop-filter: blur(12.156224250793457px);
 }

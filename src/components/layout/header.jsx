@@ -1,4 +1,7 @@
+"use client";
+
 import { ArrowRight, Menu } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,6 +21,8 @@ import renderMenuItem from "../ui/header/render-menu-item";
 import renderMobileMenuItem from "../ui/header/render-mobile-menuI-item";
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
     <section className="py-4">
       <div className="container">
@@ -39,7 +44,7 @@ const Header = () => {
               <NavigationMenu>
                 <NavigationMenuList>
                   {navigationConfig?.headerMenu?.map((item) =>
-                    renderMenuItem(item)
+                    renderMenuItem(item, pathname)
                   )}
                 </NavigationMenuList>
               </NavigationMenu>
@@ -102,7 +107,7 @@ const Header = () => {
                     className="flex w-full flex-col gap-4"
                   >
                     {navigationConfig?.headerMenu?.map((item) =>
-                      renderMobileMenuItem(item)
+                      renderMobileMenuItem(item, pathname)
                     )}
                   </Accordion>
 

@@ -44,6 +44,13 @@ const ContactUs = () => {
           </div>
           <ContactForm />
         </div>
+        <Image
+          src="/images/gradient-circle.png"
+          width={600}
+          height={600}
+          alt="Gradient"
+          className="absolute right-0 bottom-0"
+        />
       </section>
     </>
   );

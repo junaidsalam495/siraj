@@ -3,6 +3,7 @@ import { blogPosts } from "@/mock/blog-us";
 import UnderlineTitle from "../ui/text/underline-title";
 import { BlogCardLarge, BlogCardSmall } from "../ui/card/blog-card";
 import { SectionHeading } from "../ui/text/heading-text";
+import Image from "next/image";
 
 const BlogUs = () => {
   return (
@@ -14,7 +15,7 @@ const BlogUs = () => {
           highlightText="The Blog Posts"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
         <BlogCardLarge
           tags={blogPosts[0]?.tags}
           authorImage={blogPosts[0]?.authorImage}
@@ -40,6 +41,13 @@ const BlogUs = () => {
           ))}
         </div>
       </div>
+      <Image
+        src="/images/gradient-circle.png"
+        width={600}
+        height={600}
+        alt="Gradient"
+        className="absolute left-0 top-0"
+      />
     </section>
   );
 };

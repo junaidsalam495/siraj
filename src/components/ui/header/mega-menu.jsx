@@ -1,8 +1,9 @@
 import { iconMap } from "@/mock/navigation-config";
 import Image from "next/image";
+import Link from "next/link";
 import { ParagraphText, SubHeading } from "../text/heading-text";
 
-export default function MegaMenu({ item }) {
+export default function MegaMenu({ item, pathname }) {
   return (
     <>
       <div className="flex gap-8">
@@ -11,30 +12,49 @@ export default function MegaMenu({ item }) {
           <div className="grid grid-cols-2 gap-6">
             {item.items?.map((service, i) => {
               const Icon = iconMap[service.icon];
+              const isActive = pathname === service.url;
               return (
-                <div
+                <Link
                   key={i}
-                  className={`p-4 rounded-xl border border-white/20 cursor-pointer
-                      hover:bg-yellow-500 hover:text-black transition group`}
+                  href={service.url}
+                  className={`p-4 rounded-xl border cursor-pointer transition group ${
+                    isActive
+                      ? "bg-yellow-500 text-black border-primary"
+                      : "border-white/20 hover:bg-yellow-500 hover:text-black"
+                  }`}
                 >
                   <div className="flex items-start gap-3">
                     <div
-                      className="p-2 rounded-md border border-white/20
-                        bg-white/10 group-hover:bg-white"
+                      className={`p-2 rounded-md border
+                        ${
+                          isActive
+                            ? "bg-white border-white"
+                            : "border-white/20 bg-white/10 group-hover:bg-white"
+                        }`}
                     >
                       {Icon && (
-                        <Icon className="size-6 text-white group-hover:text-black" />
+                        <Icon
+                          className={`size-6 ${
+                            isActive
+                              ? "text-black"
+                              : "text-white group-hover:text-black"
+                          }`}
+                        />
                       )}
                     </div>
 
                     <div>
                       <h3 className="font-semibold">{service.title}</h3>
-                      <p className="text-sm opacity-80">
+                      <p
+                        className={`text-sm ${
+                          isActive ? "opacity-90" : "opacity-80"
+                        }`}
+                      >
                         {service.description}
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

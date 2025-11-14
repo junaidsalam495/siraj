@@ -3,6 +3,7 @@ import { services } from "@/mock/service";
 import UnderlineTitle from "../ui/text/underline-title";
 import InfoCard from "../ui/card/info-card";
 import { SectionHeading } from "../ui/text/heading-text";
+import Image from "next/image";
 
 const ServiceUs = () => {
   return (
@@ -26,6 +27,13 @@ const ServiceUs = () => {
             />
           ))}
         </div>
+        <Image
+          src="/images/gradient-circle.png"
+          width={600}
+          height={600}
+          alt="Gradient"
+          className="absolute left-0 top-0"
+        />
       </section>
     </>
   );

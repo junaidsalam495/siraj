@@ -8,22 +8,26 @@ import MegaMenu from "./mega-menu";
 
 const renderMenuItem = (item, pathname) => {
   const isActive = pathname === item.url;
-  const hasActiveSubItem = item.items?.some((subItem) => pathname === subItem.url);
+  const hasActiveSubItem = item.items?.some(
+    (subItem) => pathname === subItem.url
+  );
 
   if (item.items) {
     return (
       <NavigationMenuItem key={item.title}>
         <NavigationMenuTrigger
           className={
-            isActive || hasActiveSubItem
-              ? "text-primary underline decoration-primary decoration-2 underline-offset-4"
-              : ""
+            isActive ||
+            (hasActiveSubItem &&
+              "text-primary underline decoration-primary decoration-2 underline-offset-4")
           }
         >
           {item.title}
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="text-popover-foreground min-w-[1000px] bg-black/95 border border-primary rounded-xl p-4 shadow-2xl transition-all z-50">
-          <MegaMenu item={item} pathname={pathname} />
+        <NavigationMenuContent className="text-popover-foreground w-full bg-black/95 border-2 border-primary rounded-xl p-4 shadow-2xl transition-all z-50">
+          <div className="container mx-auto">
+            <MegaMenu item={item} pathname={pathname} />
+          </div>
         </NavigationMenuContent>
       </NavigationMenuItem>
     );

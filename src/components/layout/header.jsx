@@ -24,8 +24,8 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <section className="py-4">
-      <div className="container">
+    <section className="py-4 overflow-visible relative z-50">
+      <div className="container relative">
         <nav className="hidden items-center justify-between lg:flex">
           <div className="flex items-center gap-6">
             <a

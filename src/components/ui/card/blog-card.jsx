@@ -2,8 +2,8 @@ import React from "react";
 import { Card, CardContent } from "../card";
 import Image from "next/image";
 import { Badge } from "../badge";
-import { ArrowRightIcon, CalendarIcon, MessageSquareIcon } from "lucide-react";
-import { Button } from "../button";
+import { CalendarIcon, MessageSquareIcon } from "lucide-react";
+import { ButtonArrow } from "../button";
 import { ParagraphText, SubHeading } from "../text/heading-text";
 
 export const BlogCardLarge = ({
@@ -67,10 +67,7 @@ export const BlogCardLarge = ({
               </div>
               <SubHeading text={title} />
               <ParagraphText text={description} />
-              <Button className="font-bold">
-                Reed More
-                <ArrowRightIcon className="ml-2 w-3 h-3.5" />
-              </Button>
+              <ButtonArrow text="Read More" />
             </div>
           </div>
         </CardContent>
@@ -142,10 +139,7 @@ export const BlogCardSmall = ({
               </div>
               <SubHeading text={title} />
               <ParagraphText text={description} />
-              <Button className="font-bold">
-                Reed More
-                <ArrowRightIcon className="ml-2 w-3 h-3.5" />
-              </Button>
+              <ButtonArrow text="Read More" />
             </div>
           </div>
         </CardContent>

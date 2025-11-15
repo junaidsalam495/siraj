@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../accordion";
+import { ParagraphText } from "../text/heading-text";
 
 const AccordionRender = ({ id, question, answer }) => {
   return (
@@ -19,9 +20,7 @@ const AccordionRender = ({ id, question, answer }) => {
         </AccordionTrigger>
         {answer && (
           <AccordionContent className="px-[25px] pb-[25px]">
-            <p className="[font-family:'Nunito',Helvetica] font-normal text-[#afafaf] text-base tracking-[0] leading-[26px]">
-              {answer}
-            </p>
+            <ParagraphText text={answer} />
           </AccordionContent>
         )}
       </AccordionItem>

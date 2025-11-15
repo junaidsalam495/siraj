@@ -42,3 +42,20 @@ export const teamMembers = [
     image: "/images/team/team4.jpg",
   },
 ];
+export const aboutExpertTeam = [
+  {
+    name: "SR. Alex Robertson",
+    role: "Head Of Cybersecurity",
+    image: "/images/about/expert-tem1.png",
+  },
+  {
+    name: "Shelia Abernathy",
+    role: "Software Development",
+    image: "/images/about/expert-tem2.png",
+  },
+  {
+    name: "Devin Romaguera",
+    role: "Data Analytics Specialist",
+    image: "/images/about/expert-tem3.png",
+  },
+];

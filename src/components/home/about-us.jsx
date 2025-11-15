@@ -1,6 +1,5 @@
-import { ArrowRightIcon, Play } from "lucide-react";
-import React from "react";
-import { Button } from "../ui/button";
+import { Play } from "lucide-react";
+import {  ButtonArrow } from "../ui/button";
 import { features } from "@/mock/about-us";
 import Image from "next/image";
 import UnderlineTitle from "../ui/text/underline-title";
@@ -31,11 +30,10 @@ const AboutUs = () => {
                   className="w-14 h-[55px] md:w-20 md:h-[74px] flex-shrink-0"
                   alt={feature.title}
                   src={feature.icon}
-                  width={60}
-                  height={60}
+                  width={80}
+                  height={80}
                   loading="lazy"
                 />
-
                 <div className="space-y-1 md:space-y-2">
                   <SubHeading text={feature.title} />
                   <ParagraphText text={feature.description} />
@@ -45,13 +43,7 @@ const AboutUs = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-5">
-            <Button className="h-auto px-5 py-3 md:px-7 md:py-4 gap-2">
-              <span className="text-white text-[15px] md:text-[17px]">
-                Learn More
-              </span>
-              <ArrowRightIcon className="w-3 h-3.5" />
-            </Button>
-
+            <ButtonArrow text="Learn More" />
             <div className="flex items-center gap-4">
               <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-primary p-1.5">
                 <div className="w-full h-full rounded-full border border-primary bg-[url(/images/about/men.jpg)] bg-cover bg-center" />

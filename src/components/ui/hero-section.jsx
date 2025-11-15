@@ -1,12 +1,8 @@
-import { ArrowRightIcon } from "lucide-react";
 import React from "react";
-import { Button } from "./button";
+import { ButtonArrow } from "./button";
 import { ParagraphText, SectionHeading } from "./text/heading-text";
 
-const buttons = [
-  { text: "Get Started", icon: <ArrowRightIcon className="ml-2 w-4 h-4" /> },
-  { text: "Learn More", icon: <ArrowRightIcon className="ml-2 w-4 h-4" /> },
-];
+const buttons = [{ text: "Get Started" }, { text: "Learn More" }];
 
 const HeroSection = ({
   tagText,
@@ -36,14 +32,8 @@ const HeroSection = ({
         {isBtn && (
           <>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-              {buttons.map((button, index) => (
-                <Button
-                  key={index}
-                  className="flex items-center justify-center w-full sm:w-auto px-6 md:px-8 h-[45px] md:h-[54px] text-[15px] md:text-[17px]"
-                >
-                  {button.text}
-                  {button.icon}
-                </Button>
+              {buttons?.map((button, index) => (
+                <ButtonArrow key={index} text={button.text} />
               ))}
             </div>
           </>

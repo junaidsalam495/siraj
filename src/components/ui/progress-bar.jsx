@@ -1,6 +1,7 @@
 import React from "react";
+import { ParagraphText } from "./text/heading-text";
 
-const ProgressBar = ({ label, percentage }) => {
+export const ProgressBar = ({ label, percentage }) => {
   return (
     <>
       <div className="space-y-2.5">
@@ -25,4 +26,20 @@ const ProgressBar = ({ label, percentage }) => {
   );
 };
 
-export default ProgressBar;
+export const ProgressBarCircle = ({ label, sub, percentage }) => {
+  return (
+    <>
+      <div className="space-y-2.5">
+        <div className="flex gap-4">
+          <div className="font-medium text-white text-lg text-center w-20 h-20 border-4 border-primary rounded-full flex justify-center items-center">
+            {percentage}%
+          </div>
+          <div className="flex flex-col justify-center">
+            <ParagraphText text={label} className="text-white" />
+            <ParagraphText text={sub} />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};

@@ -1,9 +1,9 @@
 import { teamMembers } from "@/mock/team-us";
 import React from "react";
-import ExpertTeamCard from "../ui/card/expert-team-card";
 import UnderlineTitle from "../ui/text/underline-title";
 import { SectionHeading } from "../ui/text/heading-text";
 import Image from "next/image";
+import { ExpertTeamCard } from "../ui/card/expert-team-card";
 
 const ExpertTeam = () => {
   return (

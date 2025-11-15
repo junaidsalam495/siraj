@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "../card";
-import { Button } from "../button";
-import { ArrowRightIcon } from "lucide-react";
+import { ButtonArrow } from "../button";
 import { ParagraphText } from "../text/heading-text";
 import Image from "next/image";
 
@@ -22,10 +21,7 @@ const InfoCard = ({ title, icon, description, isButton = false }) => {
           </h3>
           <ParagraphText text={description} align="center" />
           {isButton ? (
-            <Button className="absolute -bottom-5">
-              <span className="text-white text-md">Read More</span>
-              <ArrowRightIcon className="w-3 h-3.5" />
-            </Button>
+            <ButtonArrow text="Read More" />
           ) : (
             <div className="absolute -bottom-8 z-50 service-card w-16 h-16 rounded-full flex justify-center items-center">
               <div className="w-8 h-8 rounded-full bg-white" />

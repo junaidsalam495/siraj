@@ -2,8 +2,9 @@ import React from "react";
 import { Card, CardContent } from "../card";
 import { Share2 } from "lucide-react";
 import { ParagraphText } from "../text/heading-text";
+import Image from "next/image";
 
-const ExpertTeamCard = ({ image, name, role }) => {
+export const ExpertTeamCard = ({ image, name, role }) => {
   return (
     <>
       <Card className="relative border-0">
@@ -33,4 +34,26 @@ const ExpertTeamCard = ({ image, name, role }) => {
   );
 };
 
-export default ExpertTeamCard;
+export const AboutExpertTeamCard = ({ image, name, role }) => {
+  return (
+    <>
+      <Card className="relative border-0 bg-transparent">
+        <CardContent className="p-0 relative">
+          <Image src={image} alt={name} width={400} height={400} />
+          <div
+            className="flex items-center justify-between bg-light-gradient p-4 rounded-lg  w-80 bg-black/30 mx-auto
+            -translate-y-12"
+          >
+            <div className="space-y-2">
+              <ParagraphText text={name} className="text-white !text-xl" />
+              <ParagraphText text={role} className="text-white" />
+            </div>
+            <div className="bg-primary rounded-full w-10 h-10 flex justify-center items-center">
+              <Share2 size={18} />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </>
+  );
+};

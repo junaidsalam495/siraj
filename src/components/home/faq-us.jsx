@@ -39,20 +39,20 @@ const FaqUs = () => {
           <Image
             alt="Client icons"
             src="/images/faq/faq1.jpg"
-            width={400}
-            height={400}
-            className="rounded-lg md:absolute right-20 top-0 z-10"
+            width={360}
+            height={360}
+            className="rounded-lg md:absolute right-20 md:top-28 z-10"
             loading="lazy"
           />
           <Image
             alt="Client icons"
             src="/images/faq/faq2.png"
-            width={500}
-            height={500}
+            width={460}
+            height={460}
             className="rounded-lg md:block hidden absolute bottom-0 left-0"
             loading="lazy"
           />
-          <div className="md:flex flex-col items-center justify-center bg-primary rounded-lg w-48 h-40 absolute top-8 left-8 z-10 hidden">
+          <div className="md:flex flex-col items-center justify-center bg-primary rounded-lg w-44 h-36 absolute md:top-36 left-4 z-10 hidden">
             <h2 className="text-4xl font-bold">55</h2>
             <ParagraphText
               className="text-white text-nowrap"

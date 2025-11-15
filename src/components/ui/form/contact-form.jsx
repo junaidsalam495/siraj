@@ -1,6 +1,5 @@
-import { ArrowRightIcon, FileTextIcon } from "lucide-react";
-import React from "react";
-import { Button } from "../button";
+import { FileTextIcon } from "lucide-react";
+import { ButtonArrow } from "../button";
 import { formFields } from "@/mock/contact-us";
 import { Label } from "../label";
 import { Input } from "../input";
@@ -47,10 +46,7 @@ const ContactForm = () => {
             <FileTextIcon className="absolute right-3 top-3 w-3.5 h-3.5 text-white" />
           </div>
         </div>
-        <Button className="h-[54px] px-8">
-          <span className="font-medium text-white text-[17px]">Submit Now</span>
-          <ArrowRightIcon className="ml-2 w-3 h-3.5" />
-        </Button>
+        <ButtonArrow text="Submit Now" />
       </form>
     </>
   );
